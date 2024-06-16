@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronSave", "IronSave\IronSave\IronSave.csproj", "{74B0D008-2E75-4B27-9392-48F31BFF48F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IronSave.Desktop", "IronSave\IronSave.Desktop\IronSave.Desktop.csproj", "{B9947435-AB94-4835-BAF4-79E90B0542FD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74B0D008-2E75-4B27-9392-48F31BFF48F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74B0D008-2E75-4B27-9392-48F31BFF48F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74B0D008-2E75-4B27-9392-48F31BFF48F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74B0D008-2E75-4B27-9392-48F31BFF48F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9947435-AB94-4835-BAF4-79E90B0542FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9947435-AB94-4835-BAF4-79E90B0542FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9947435-AB94-4835-BAF4-79E90B0542FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9947435-AB94-4835-BAF4-79E90B0542FD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

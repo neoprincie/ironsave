@@ -1,0 +1,67 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:IronSave.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="IronSave.Views.MainView"
+             x:DataType="vm:MainViewModel">
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+  </Design.DataContext>
+    <Grid RowDefinitions="Auto, *" ColumnDefinitions="*, *, *">
+        <!-- <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="0" Grid.Column="0"> -->
+        <!--     <TextBlock Text="Campaign"/>  -->
+        <!--     <TextBox Text="{Binding CampaignName}" /> -->
+        <!--     <TextBlock Text="{Binding ParadoxSaveFolder}"/>  -->
+        <!--     <TextBlock Text="{Binding IronSaveFolder}"/>  -->
+        <!-- </StackPanel> -->
+        <TextBlock Grid.Row="0" Grid.Column="0" Text="Campaigns" FontSize="16" FontWeight="Bold" TextAlignment="Center" />
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="IronSave v0.0.1" FontSize="18" FontWeight="Bold" TextAlignment="Center" />
+        <TextBlock Grid.Row="0" Grid.Column="2" Text="Saves" FontSize="16" FontWeight="Bold" TextAlignment="Center" />
+        
+        <ListBox Grid.Column="0" Grid.Row="1" ItemsSource="{Binding Campaigns}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Name}" FontWeight="Bold"/>
+                        <TextBlock Text="6/6/2024 4:07pm" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <StackPanel Grid.Row="1" Grid.Column="1" HorizontalAlignment="Stretch" Spacing="25">
+            <!-- <TextBlock Text="IronSave v0.0.1" FontSize="18" FontWeight="Bold" TextAlignment="Center" /> -->
+            <TextBlock Text="by neoprincie" FontSize="14" TextAlignment="Center" />
+            
+            <Button Content="Quick Save" Command="{Binding Save}" HorizontalAlignment="Stretch" Margin="10"></Button>
+            
+            <StackPanel HorizontalAlignment="Stretch" Margin="10" Spacing="2">
+                <TextBlock Text="Save with description" FontWeight="Bold"></TextBlock>
+                <TextBox />
+                <Button Content="Save" Command="{Binding Save}" HorizontalAlignment="Stretch"></Button>
+            </StackPanel>
+            
+            <StackPanel HorizontalAlignment="Stretch" Margin="10" Spacing="2">
+                <TextBlock Text="Load campaign" FontWeight="Bold"></TextBlock>
+                <TextBlock Text="(Be sure to exit the game first)" FontStyle="Italic"></TextBlock>
+                <Button Content="Load" Command="{Binding Save}" HorizontalAlignment="Stretch"></Button>
+            </StackPanel>
+        </StackPanel>
+        <ListBox Grid.Column="2" Grid.Row="1" ItemsSource="{Binding Campaigns}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="001" FontWeight="Bold"/>
+                        <TextBlock Text="Init" />
+                        <TextBlock Text="6/6/2024 4:07pm" />
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+    
+  
+</UserControl>
