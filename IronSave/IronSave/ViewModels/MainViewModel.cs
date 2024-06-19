@@ -52,6 +52,8 @@ public class MainViewModel : ViewModelBase
             IronSaveFolder + "/" + SelectedCampaign.Name + "/" + saveName + "/" + SelectedCampaign.Name + ".eu4");
         File.Copy(ParadoxSaveFolder + "/" + SelectedCampaign.Name + "_backup.eu4",
             IronSaveFolder + "/" + SelectedCampaign.Name + "/" + saveName + "/" + SelectedCampaign.Name + "_backup.eu4");
+        
+        LoadSaves();
     }
 
     public void QuickSave()
@@ -65,6 +67,8 @@ public class MainViewModel : ViewModelBase
             IronSaveFolder + "/" + SelectedCampaign.Name + "/" + saveName + "/" + SelectedCampaign.Name + ".eu4");
         File.Copy(ParadoxSaveFolder + "/" + SelectedCampaign.Name + "_backup.eu4",
             IronSaveFolder + "/" + SelectedCampaign.Name + "/" + saveName + "/" + SelectedCampaign.Name + "_backup.eu4");
+        
+        LoadSaves();
     }
 
     public void Load()
